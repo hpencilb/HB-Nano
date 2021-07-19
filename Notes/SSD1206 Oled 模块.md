@@ -4,6 +4,11 @@
 
 [Github ssd1206](https://github.com/codelectron/ssd1306)
 
+```shell
+sudo apt install i2c-tools python3-smbus python3-pip
+sudo pip3 install pillow
+```
+
 探测 i2c 地址
 
 ```shell
@@ -17,7 +22,7 @@ i2cdetect -y -r 1
 最简单的 hello word
 
 ```python
-from oled.device import ssd1306, sh1106
+from oled.device import ssd1306
 from oled.render import canvas
 from PIL import ImageFont, ImageDraw
 
@@ -44,13 +49,11 @@ with canvas(device) as draw:
 
 ## 开机自动启动
 
-[](https://forums.developer.nvidia.com/t/how-to-run-a-script-on-boot/108411/3)
+[How to run a script on boot](https://forums.developer.nvidia.com/t/how-to-run-a-script-on-boot/108411/3)
 
 总结一下就是：通过系统服务使用 `systemd` 来将在启动时调用脚本。
 
-
-
-`lib/systemd/system/oled.service`
+`/lib/systemd/system/oled.service`
 
 ```shell
 [Unit]
@@ -63,7 +66,11 @@ User=hb
 WantedBy=multi-user.target
 ```
 
-
-
 [oled.sh](../oled/oled.sh)
+
+激活自动启动服务
+
+`sudo systemctl enable oled.service`
+
+
 

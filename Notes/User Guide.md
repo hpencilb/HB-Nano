@@ -6,7 +6,7 @@
 
 ![Jetson_Nano_2GB_Carrier_Board_Top_View_4](.assets/641393088.png)
 
-![Jetson_Nano_2GB_Carrier_Board_Bottom_View](.assets/633427281.png)
+<img src=".assets/633427281.png" alt="Jetson_Nano_2GB_Carrier_Board_Bottom_View"  />
 
 [DS1] Power LED; lights when the developer kit is powered on
 
