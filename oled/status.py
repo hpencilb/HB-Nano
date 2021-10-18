@@ -89,10 +89,7 @@ if __name__ == "__main__":
             draw.text((10, -2), f'{get_host_ip()}', font=font1, fill=255)
 
             # uptime
-            uptime = str(datetime.timedelta(seconds=int(time.time()-boot_time))
-                         ).replace(" day", "d").replace(",", "").replace("s", "")
-            if len(uptime) > 8:
-                uptime = uptime[:-3]
+            uptime = str(datetime.timedelta(seconds=int(time.time()-boot_time))).replace(" day", ":").replace(", ", "").replace("s", "")
             draw.text((8, 13), f'ONLINE  FOR  {uptime}', font=font2, fill=255)
 
             # 4 system status
