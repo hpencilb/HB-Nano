@@ -28,10 +28,8 @@ sudo modprobe mt7601Usta
 ```
 
 > [Existing Linux Wireless drivers](https://wireless.wiki.kernel.org/en/users/drivers)
->
+> 
 > **Linux 内核中包含了对 mt7601u 的驱动，不需要手动安装。**
-
-
 
 ## 配置 Wi-Fi
 
@@ -48,21 +46,17 @@ sudo modprobe mt7601Usta
 ```shell
 ctrl_interface=/var/run/wpa_supplicant
 network={
-	ssid="seu-wlan"
-	psk="密码"
+    ssid="seu-wlan"
+    psk="密码"
 }
 ```
-
-
 
 一定要 `sudo` 来运行
 
 ```shell
-sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/seu-wlan.conf
+sudo wpa_supplicant -B -i wlan0 -c /etc/seu-wlan.conf
 sudo dhclient wlan0
 ```
-
-
 
 ## 设置开机自动连接
 
@@ -75,6 +69,3 @@ allow-hotplug wlan0
 iface wlan0 inet dhcp
     wpa-conf /etc/seu-wlan.conf
 ```
-
-
-

@@ -1,0 +1,8 @@
+[Unit]
+After=network.target
+Description="AP Guard Service"
+[Service]
+ExecStart=/usr/bin/python3 /root/Project/APGuard/apguard.py
+User=root
+[Install]
+WantedBy=multi-user.target
