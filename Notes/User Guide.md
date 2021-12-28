@@ -36,8 +36,6 @@
 
 [J13] Micro-USB 2.0 connector supporting Recovery Mode and Device Mode
 
-
-
 ## 40-Pin Header (J6)
 
 The 40-pin header provides access to power, ground, and interface signal pins.
@@ -55,30 +53,26 @@ Note that the I2C interface pins are pulled up with 2.2kohm resistors to 3.3V. A
 
 ![Jetson_Nano_2GB_Carrier_Board_Top_View_3](.assets/646984561.png)
 
-
-
 ## 12-Pin Button Header (J12)
 
 This header provides GPIO to control the state of the board. Enclosures for the developer kit can connect to this header.
 
 ![Button_Header](.assets/609890333.png)
 
-| Pin  |         Name         |                         Description                          | Power |
-| :--: | :------------------: | :----------------------------------------------------------: | :---: |
-|  1   |     Power LED -      | Connects to LED Cathode to indicate System Sleep/Wake (Off when system in sleep mode) |  +5V  |
-|  2   |     Power LED +      |              Connects to LED Anode (see pin 1)               |  +5V  |
-|  3   |      UART2_RXD       |                           Receive                            | +3.3V |
-|  4   |      UART2_TXD       |                           Transmit                           | +3.3V |
-|  5   |      Latch Set       | Connect pin 5 and pin 6 to disable Auto-Power-On and require power button press (or equivalent) |  +5V  |
-|  6   |   Latch Set Button   | Connect pin 5 and pin 6 to disable Auto-Power-On and require power button press (or equivalent) |  +5V  |
-|  7   |        Ground        |                                                              |       |
-|  8   |     Reset Button     | Connect normally open button to pin 7 and pin 8. Temporarily press button to initiate system reset | +1.8V |
-|  9   |        Ground        |                                                              |       |
-|  10  | Recovery Mode Button | Connect normally open button to pin 9 and pin 10. Hold button down while powering on the system to put it in USB Force Recovery mode | +1.8V |
-|  11  |        Ground        |                                                              |       |
-|  12  |     Power Button     | Connect normally open button to pin 11 and pin 12. Temporarily press button to initiate power-on if Auto-Power-On disabled (pin 5 and pin 6 connected) |  +5V  |
-
-
+| Pin | Name                 | Description                                                                                                                                            | Power |
+|:---:|:--------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|
+| 1   | Power LED -          | Connects to LED Cathode to indicate System Sleep/Wake (Off when system in sleep mode)                                                                  | +5V   |
+| 2   | Power LED +          | Connects to LED Anode (see pin 1)                                                                                                                      | +5V   |
+| 3   | UART2_RXD            | Receive                                                                                                                                                | +3.3V |
+| 4   | UART2_TXD            | Transmit                                                                                                                                               | +3.3V |
+| 5   | Latch Set            | Connect pin 5 and pin 6 to disable Auto-Power-On and require power button press (or equivalent)                                                        | +5V   |
+| 6   | Latch Set Button     | Connect pin 5 and pin 6 to disable Auto-Power-On and require power button press (or equivalent)                                                        | +5V   |
+| 7   | Ground               |                                                                                                                                                        |       |
+| 8   | Reset Button         | Connect normally open button to pin 7 and pin 8. Temporarily press button to initiate system reset                                                     | +1.8V |
+| 9   | Ground               |                                                                                                                                                        |       |
+| 10  | Recovery Mode Button | Connect normally open button to pin 9 and pin 10. Hold button down while powering on the system to put it in USB Force Recovery mode                   | +1.8V |
+| 11  | Ground               |                                                                                                                                                        |       |
+| 12  | Power Button         | Connect normally open button to pin 11 and pin 12. Temporarily press button to initiate power-on if Auto-Power-On disabled (pin 5 and pin 6 connected) | +5V   |
 
 ## 8-Pin Button Header (J11)
 
@@ -94,18 +88,16 @@ Header details ( [examples ](https://www.digikey.com/products/en/connectors-inte
 
 ![Alt_8pin_Button_Header](.assets/619233705.png)
 
-| Pin  |         Name          |                         Description                          | Power |
-| :--: | :-------------------: | :----------------------------------------------------------: | :---: |
-|  1   |     Power Button      | Connect normally open button to pin 1 and pin 2. Temporarily press button to initiate power-on if Auto-Power-On disabled (pin 7 and pin 8 connected) |  +5V  |
-|  2   |        Ground         |                                                              |       |
-|  3   | Force Recovery Button | Connect normally open button to pin 3 and pin 4. Hold button down while powering on the system to put it in USB Force Recovery mode | +1.8V |
-|  4   |        Ground         |                                                              |       |
-|  5   |     Reset Button      | Connect normally open button to pin 5 and pin 6. Temporarily press button to initiate system reset | +1.8V |
-|  6   |        Ground         |                                                              |       |
-|  7   |   Latch Set Button    | Connect pin 7 and pin 8 to disable Auto-Power-On and require power button press (or equivalent) |  +5V  |
-|  8   |       Latch Set       | Connect pin 7 and pin 8 to disable Auto-Power-On and require power button press (or equivalent) |  +5V  |
-
-
+| Pin | Name                  | Description                                                                                                                                          | Power |
+|:---:|:---------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------:|:-----:|
+| 1   | Power Button          | Connect normally open button to pin 1 and pin 2. Temporarily press button to initiate power-on if Auto-Power-On disabled (pin 7 and pin 8 connected) | +5V   |
+| 2   | Ground                |                                                                                                                                                      |       |
+| 3   | Force Recovery Button | Connect normally open button to pin 3 and pin 4. Hold button down while powering on the system to put it in USB Force Recovery mode                  | +1.8V |
+| 4   | Ground                |                                                                                                                                                      |       |
+| 5   | Reset Button          | Connect normally open button to pin 5 and pin 6. Temporarily press button to initiate system reset                                                   | +1.8V |
+| 6   | Ground                |                                                                                                                                                      |       |
+| 7   | Latch Set Button      | Connect pin 7 and pin 8 to disable Auto-Power-On and require power button press (or equivalent)                                                      | +5V   |
+| 8   | Latch Set             | Connect pin 7 and pin 8 to disable Auto-Power-On and require power button press (or equivalent)                                                      | +5V   |
 
 ## 4-Pin Fan Header (J7)
 
@@ -117,9 +109,9 @@ The header can support either a 3-pin fan connection (GND, PWR, and TACH) or a 4
 
 ![Fan_Header](.assets/641378211.png)
 
-| Pin  | Description                  |
-| :--- | :--------------------------- |
-| 1    | Ground                       |
-| 2    | +5V Power                    |
-| 3    | Tachometer                   |
-| 4    | PWM (Pulse Width Modulation) |
+| Pin | Description                  |
+|:--- |:---------------------------- |
+| 1   | Ground                       |
+| 2   | +5V Power                    |
+| 3   | Tachometer                   |
+| 4   | PWM (Pulse Width Modulation) |

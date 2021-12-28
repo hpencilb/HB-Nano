@@ -1,0 +1,8 @@
+[Unit]
+After=network.target
+Description="Oled Service"
+[Service]
+ExecStart=/usr/bin/sh /root/Project/oled/oled.sh
+User=root
+[Install]
+WantedBy=multi-user.target
